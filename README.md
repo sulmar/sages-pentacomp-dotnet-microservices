@@ -8,7 +8,7 @@ Witaj w repozytorium z materiałami do szkolenia **Architektura mikroserwisów z
 Do rozpoczęcia tego kursu potrzebujesz następujących rzeczy:
 
 1. [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
-2. [Docker](https://www.docker.com/products/docker-desktop/)
+2. [Rancher Desktop](https://rancherdesktop.io)
 
 ## Przygotowanie
 1. Sklonuj repozytorium Git
