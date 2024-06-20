@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MicroServices", "MicroServices", "{FEC817D6-1C9D-45BC-9981-256A54612993}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProductCatalog", "ProductCatalog", "{3F6129D7-F5FD-404E-A5C8-5C189F8FDBCF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{3C3ECFC4-01BE-458F-818E-9F1FC3C0CE30}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp", "src\Clients\Blazor.Client\BlazorApp.csproj", "{C6E43221-EC08-4160-9FE1-ABC7BF339EF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.Api", "src\MicroServices\ProductCatalog\Catalog.Api\Catalog.Api.csproj", "{20267671-31BA-4ADF-9110-7FD0AE64ADB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.Domain", "src\MicroServices\ProductCatalog\Catalog.Domain\Catalog.Domain.csproj", "{A1AEBAED-62B5-4E9F-B973-F3EBC0715BAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.Infrastructure", "src\MicroServices\ProductCatalog\Catalog.Infrastructure\Catalog.Infrastructure.csproj", "{7C9214BB-B995-4476-A762-9E5C151A7BF4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C6E43221-EC08-4160-9FE1-ABC7BF339EF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6E43221-EC08-4160-9FE1-ABC7BF339EF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6E43221-EC08-4160-9FE1-ABC7BF339EF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6E43221-EC08-4160-9FE1-ABC7BF339EF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20267671-31BA-4ADF-9110-7FD0AE64ADB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20267671-31BA-4ADF-9110-7FD0AE64ADB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20267671-31BA-4ADF-9110-7FD0AE64ADB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20267671-31BA-4ADF-9110-7FD0AE64ADB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1AEBAED-62B5-4E9F-B973-F3EBC0715BAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1AEBAED-62B5-4E9F-B973-F3EBC0715BAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1AEBAED-62B5-4E9F-B973-F3EBC0715BAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1AEBAED-62B5-4E9F-B973-F3EBC0715BAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C9214BB-B995-4476-A762-9E5C151A7BF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C9214BB-B995-4476-A762-9E5C151A7BF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C9214BB-B995-4476-A762-9E5C151A7BF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C9214BB-B995-4476-A762-9E5C151A7BF4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3F6129D7-F5FD-404E-A5C8-5C189F8FDBCF} = {FEC817D6-1C9D-45BC-9981-256A54612993}
+		{C6E43221-EC08-4160-9FE1-ABC7BF339EF0} = {3C3ECFC4-01BE-458F-818E-9F1FC3C0CE30}
+		{20267671-31BA-4ADF-9110-7FD0AE64ADB6} = {3F6129D7-F5FD-404E-A5C8-5C189F8FDBCF}
+		{A1AEBAED-62B5-4E9F-B973-F3EBC0715BAE} = {3F6129D7-F5FD-404E-A5C8-5C189F8FDBCF}
+		{7C9214BB-B995-4476-A762-9E5C151A7BF4} = {3F6129D7-F5FD-404E-A5C8-5C189F8FDBCF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BCB1EAC5-8E74-4452-835A-605AC212ABC9}
+	EndGlobalSection
+EndGlobal
