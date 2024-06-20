@@ -17,6 +17,13 @@ public class FakeCartItemRepository(Context _context) : ICartItemRepository
 
         return Task.CompletedTask;
     }
+
+    public Task Clear()
+    {
+        _context.Items.Clear();
+
+        return Task.CompletedTask;
+    }
 }
 
 public class Context

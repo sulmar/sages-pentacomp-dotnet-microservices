@@ -10,4 +10,5 @@ public interface ICartRepository
 public interface ICartItemRepository
 {
     Task Add(CartItem item);
+    Task Clear();
 }
