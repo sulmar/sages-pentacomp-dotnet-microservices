@@ -29,6 +29,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateway", "ApiGateway", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YarpApiGateway", "src\ApiGateway\YarpApiGateway\YarpApiGateway.csproj", "{3F267EFE-56F6-4A97-A0F2-BCADEAB66710}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Monitoring", "Monitoring", "{F043822E-A6FB-4A4F-9CF4-AAB3EE6FFC39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthCheckMonitor", "src\Monitoring\HealthCheckMonitor\HealthCheckMonitor.csproj", "{91D3CE6C-6B83-4828-A351-164B21613579}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +71,10 @@ Global
 		{3F267EFE-56F6-4A97-A0F2-BCADEAB66710}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F267EFE-56F6-4A97-A0F2-BCADEAB66710}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F267EFE-56F6-4A97-A0F2-BCADEAB66710}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91D3CE6C-6B83-4828-A351-164B21613579}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91D3CE6C-6B83-4828-A351-164B21613579}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91D3CE6C-6B83-4828-A351-164B21613579}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91D3CE6C-6B83-4828-A351-164B21613579}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -82,6 +90,7 @@ Global
 		{918DE11A-A2C1-42DE-852E-863B80DE0FFE} = {11073258-81FC-42C3-8669-DB014BFAC226}
 		{05BEB963-F547-4D80-ACE7-F8EE6C65B388} = {11073258-81FC-42C3-8669-DB014BFAC226}
 		{3F267EFE-56F6-4A97-A0F2-BCADEAB66710} = {2B940E2E-4170-4BF6-A6F4-FCFD25EBE7F4}
+		{91D3CE6C-6B83-4828-A351-164B21613579} = {F043822E-A6FB-4A4F-9CF4-AAB3EE6FFC39}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BCB1EAC5-8E74-4452-835A-605AC212ABC9}
