@@ -27,10 +27,10 @@ builder.Services.AddCors(options => options.AddDefaultPolicy(policy =>
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseCors();
-}
+//if (app.Environment.IsDevelopment())
+//{
+//    app.UseCors();
+//}
 
 app.MapGet("/", () => "Hello Catalog Api!");
 
