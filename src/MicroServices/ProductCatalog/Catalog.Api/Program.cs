@@ -2,6 +2,7 @@ using Catalog.Domain.Abstractions;
 using Catalog.Domain.Entities;
 using Catalog.Infrastructure;
 using HealthChecks.UI.Client;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -51,7 +52,16 @@ app.MapGet("/", () => "Hello Catalog Api!");
 
 app.MapGet("api/products/ping", () => "pong");
 
-app.MapGet("api/products", async (IProductRepository repository) => await repository.GetAllAsync());
+
+app.MapGet("api/products", async (IProductRepository repository, HttpContext context) =>
+{
+    if (context.User.Identity.IsAuthenticated)
+    {
+
+    }
+
+    return await repository.GetAllAsync();
+});
 
 app.MapHealthChecks("/api/products/hc", new Microsoft.AspNetCore.Diagnostics.HealthChecks.HealthCheckOptions
 {

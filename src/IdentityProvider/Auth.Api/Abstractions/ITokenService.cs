@@ -4,5 +4,5 @@ namespace Auth.Api.Abstractions;
 
 public interface ITokenService
 {
-    string CreateToken(IdentityUser identity);
+    string CreateAccessToken(IdentityUser identityUser);
 }

@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Identity;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSingleton<IAuthService, AuthService>();
-builder.Services.AddSingleton<ITokenService, FakeTokenService>();
+builder.Services.AddSingleton<ITokenService, JwtTokenService>();
 builder.Services.AddSingleton<IIdentityUserRepository, FakeIdentityUserRepository>();
 builder.Services.AddSingleton<IPasswordHasher<Auth.Api.Model.IdentityUser>, PasswordHasher<Auth.Api.Model.IdentityUser>>();
 
@@ -20,7 +20,7 @@ app.MapPost("api/login", async (LoginModel model, IAuthService authService, ITok
 
     if (result.IsAuthenticated)
     {
-        var accessToken = tokenService.CreateToken(result.Identity);
+        var accessToken = tokenService.CreateAccessToken(result.Identity);
 
         return Results.Ok(accessToken);
     }
