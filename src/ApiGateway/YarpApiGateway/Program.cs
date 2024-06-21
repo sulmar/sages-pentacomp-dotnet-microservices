@@ -27,9 +27,32 @@ builder.Services.AddAuthentication(options =>
         ValidAudience = "https://domain.com"
     };
 
+    options.Events = new JwtBearerEvents
+    {
+        OnMessageReceived = context =>
+        {
+            context.Token = context.Request.Cookies["access-token"];
+            return Task.CompletedTask;
+        }
+    };
+
 });
 
-builder.Services.AddAuthorization();
+builder.Services.AddAuthorization(options =>
+{
+    // domyslna regu³a
+    //options.AddPolicy("default", policy =>
+    //{
+    //    policy.RequireAuthenticatedUser();
+    //});
+
+    options.AddPolicy("vip-policy", policy =>
+    {
+        policy
+            .RequireAuthenticatedUser()
+            .RequireRole("trainer");
+    });
+});
 
 // dotnet add package Yarp.ReverseProxy
 builder.Services.AddReverseProxy()
@@ -50,6 +73,8 @@ app.MapGet("api/secret", (HttpContext context) =>
     }
     else
         return Results.Unauthorized();
-}).RequireAuthorization();
+}).RequireAuthorization("vip-policy");
+
+// [Authorize(Policies="vip-policy")]
 
 app.Run();

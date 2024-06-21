@@ -1,5 +1,6 @@
 ﻿using Auth.Api.Abstractions;
 using Auth.Api.Model;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -13,6 +14,15 @@ public class FakeTokenService : ITokenService
 }
 
 
+
+public class MyClaimsTransformation : IClaimsTransformation
+{
+    public Task<ClaimsPrincipal> TransformAsync(ClaimsPrincipal principal)
+    {
+        throw new NotImplementedException();
+    }
+}
+
 // dotnet add package System.IdentityModel.Tokens.Jwt
 // nowsza: Microsoft.IdentityModel.JsonWebTokens
 public class JwtTokenService : ITokenService
@@ -24,6 +34,7 @@ public class JwtTokenService : ITokenService
         identity.AddClaim(new Claim("ln", identityUser.LastName));
         identity.AddClaim(new Claim("email", identityUser.Email));
         identity.AddClaim(new Claim(ClaimTypes.Role, "developer"));
+        identity.AddClaim(new Claim(ClaimTypes.Role, "trainer"));
 
         var secretKey = "your-256-bit-secret-key-your-256-bit-secret-key-your-256-bit-secret-key-your-256-bit-secret-key";
 
