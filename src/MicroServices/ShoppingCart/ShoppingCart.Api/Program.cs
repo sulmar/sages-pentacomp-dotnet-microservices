@@ -1,4 +1,5 @@
 using HealthChecks.UI.Client;
+using ShoppingCart.Api.Mappers;
 using ShoppingCart.Domain.Abstractions;
 using ShoppingCart.Domain.Entities;
 using ShoppingCart.Infrastructure;
@@ -21,7 +22,7 @@ app.MapGet("/", () => "Hello Shopping Cart Api!");
 
 app.MapPost("api/cart", (Product product, ICartItemRepository repository) =>
 {
-    var cartItem = new CartItem { Product = product };
+    var cartItem = ProductToCartItemMapper.Map(product);
 
     repository.Add(cartItem);
 });
